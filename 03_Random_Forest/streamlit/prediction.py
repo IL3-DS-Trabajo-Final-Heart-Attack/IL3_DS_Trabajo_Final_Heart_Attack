@@ -11,14 +11,14 @@ def show_patient_prediction_section():
     with col1:
         st.write("### Ingrese los datos del paciente")
         with st.form("patient_form"):
-            age = st.number_input("Edad", min_value=1, max_value=120, value=60)
-            gender = st.selectbox("Género", options=[("Hombre", 1), ("Mujer", 0)], format_func=lambda x: x[0])[1]
-            hr = st.number_input("Frecuencia cardíaca (latidos/min)", min_value=30, max_value=200, value=80)
-            sbp = st.number_input("Presión sistólica (mmHg)", min_value=50, max_value=250, value=120)
-            dbp = st.number_input("Presión diastólica (mmHg)", min_value=30, max_value=150, value=92)
-            bs = st.number_input("Azúcar en sangre (mg/dL)", min_value=40, max_value=500, value=100)
-            ckmb = st.number_input("CK-MB (ng/mL)", min_value=0.0, max_value=100.0, value=12.0)
-            trop = st.number_input("Troponina (ng/mL)", min_value=0.0, max_value=10.0, value=0.014, format="%f")
+            age = st.number_input("Edad", min_value=18, max_value=100, value=55, help="Edad del paciente en años")
+            gender = st.selectbox("Género", options=[("Hombre", 1), ("Mujer", 0)], format_func=lambda x: x[0], help="Género del paciente")[1]
+            hr = st.number_input("Frecuencia cardíaca (latidos/min)", min_value=40, max_value=180, value=75, help="Frecuencia cardíaca en reposo")
+            sbp = st.number_input("Presión sistólica (mmHg)", min_value=80, max_value=220, value=130, help="Presión arterial sistólica")
+            dbp = st.number_input("Presión diastólica (mmHg)", min_value=50, max_value=120, value=85, help="Presión arterial diastólica")
+            bs = st.number_input("Azúcar en sangre (mg/dL)", min_value=60, max_value=400, value=95, help="Nivel de glucosa en sangre")
+            ckmb = st.number_input("CK-MB (ng/mL)", min_value=0.0, max_value=50.0, value=3.5, step=0.1, help="Nivel de creatina quinasa-MB")
+            trop = st.number_input("Troponina (ng/mL)", min_value=0.0, max_value=5.0, value=0.01, step=0.001, format="%.3f", help="Nivel de troponina cardíaca")
             submitted = st.form_submit_button("Predecir")
 
     with col2:
