@@ -69,7 +69,6 @@ def show_patient_prediction_section():
             **ESTE MODELO:**
             - Fue desarrollado únicamente con fines educativos y de investigación
             - NO pretende suplantar o reemplazar el criterio médico profesional
-            - NO debe utilizarse como herramienta de diagnóstico clínico
             - Los resultados deben interpretarse con precaución
             
             **En caso de síntomas sospechosos de infarto, busque atención médica inmediata.**
