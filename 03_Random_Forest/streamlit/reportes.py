@@ -4,6 +4,8 @@ import os
 from sklearn.metrics import roc_curve, roc_auc_score
 from prediction_utils import load_model
 
+# Obtener la ruta del directorio actual del script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def show_classification_report_table(report_path):
     if os.path.exists(report_path):

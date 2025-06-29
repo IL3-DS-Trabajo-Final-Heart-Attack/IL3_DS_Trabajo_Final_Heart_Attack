@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
+import os
 from prediction_utils import load_model, predict
+
+# Obtener la ruta del directorio actual del script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def show_patient_prediction_section():
     col1, col2 = st.columns([1.2, 2])
@@ -20,13 +24,13 @@ def show_patient_prediction_section():
     with col2:
         st.write("### Valores de referencia")
         ref_data = [
-            ["HR (reposo)", "bpm", "60–100", "-", "< 60 (bradicardia), > 100 (taquicardia)"],
-            ["SBP", "mm Hg", "< 120", "120–129 (elevado)", "≥ 130 etapa 1–2; ≥ 180 crisis"],
-            ["DBP", "mm Hg", "< 80", "< 60 hipotensión; 80–89 etapa 1", "≥ 90 etapa 2; ≥ 120 crisis"],
-            ["Glucemia ayuno", "mg/dL", "70–99", "< 70 hipoglucemia; 100–125 prediabetes", "≥ 126 diabetes"],
-            ["CK‑MB", "ng/mL", "< 5", "5–10 elevado", ">10 infarto extenso"],
-            ["Troponina T", "ng/mL", "< 0.01", "0.01–0.13 elevado", "≥ 0.14"],
-            ["hs‑Troponin T", "ng/mL", "< 0.014", "0.014–0.052 elevado", "≥ 0.053"],
+            ["HR (reposo)", "bpm", "60–100", "-", "< 60 (bradicardia), > 100 (taquicardia)"],
+            ["SBP", "mm Hg", "< 120", "120–129 (elevado)", "≥ 130 etapa 1–2; ≥ 180 crisis"],
+            ["DBP", "mm Hg", "< 80", "< 60 hipotensión; 80–89 etapa 1", "≥ 90 etapa 2; ≥ 120 crisis"],
+            ["Glucemia ayuno", "mg/dL", "70–99", "< 70 hipoglucemia; 100–125 prediabetes", "≥ 126 diabetes"],
+            ["CK‑MB", "ng/mL", "< 5", "5–10 elevado", ">10 infarto extenso"],
+            ["Troponina T", "ng/mL", "< 0.01", "0.01–0.13 elevado", "≥ 0.14"],
+            ["hs‑Troponin T", "ng/mL", "< 0.014", "0.014–0.052 elevado", "≥ 0.053"],
         ]
         ref_df = pd.DataFrame(ref_data, columns=["Variable", "Unidad", "Normal", "Elevado / Bajo", "Crítico / IAM / Crisis"])
         st.dataframe(ref_df, hide_index=True, use_container_width=True)
@@ -43,7 +47,7 @@ def show_patient_prediction_section():
                 "trop": trop
             }
             nuevo_paciente = pd.DataFrame([valores_paciente])
-            model = load_model("models/rf_model.joblib")
+            model = load_model(os.path.join(SCRIPT_DIR, "models/rf_model.joblib"))
             pred, proba = predict(model, nuevo_paciente)
 
             st.write("### Resultado de la predicción")

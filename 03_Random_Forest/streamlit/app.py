@@ -9,6 +9,9 @@ from trees import show_tree_images
 from prediction import show_patient_prediction_section
 from prediction_utils import load_model, predict
 
+# Obtener la ruta del directorio actual del script
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def plot_feature_importance(model, features, ax=None):
     importances = model.feature_importances_
     if ax is None:
@@ -39,20 +42,20 @@ def main():
         st.subheader("Reportes del Modelo")
         col1, col2, col3 = st.columns(3)
         with col1:
-            show_classification_report_table("reports/classification_report.txt")
+            show_classification_report_table(os.path.join(SCRIPT_DIR, "reports/classification_report.txt"))
         with col2:
             # Cargar datos de test
-            X_test = pd.read_csv("data/processed/X_test.csv")
-            y_test = pd.read_csv("data/processed/y_test.csv").squeeze()
-            model = load_model("models/rf_model.joblib")
+            X_test = pd.read_csv(os.path.join(SCRIPT_DIR, "data/processed/X_test.csv"))
+            y_test = pd.read_csv(os.path.join(SCRIPT_DIR, "data/processed/y_test.csv")).squeeze()
+            model = load_model(os.path.join(SCRIPT_DIR, "models/rf_model.joblib"))
             show_roc_curve_section(model, X_test, y_test)
         with col3:
-            model = load_model("models/rf_model.joblib")
+            model = load_model(os.path.join(SCRIPT_DIR, "models/rf_model.joblib"))
             show_feature_importance_chart(model, ["age", "gender", "hr", "sbp", "dbp", "bs", "ckmb", "trop"])
 
     elif menu == "Árboles de decisión":
         st.subheader("Primeros 9 árboles de decisión del modelo")
-        show_tree_images("reports/trees")
+        show_tree_images(os.path.join(SCRIPT_DIR, "reports/trees"))
 
 if __name__ == "__main__":
     main()  
