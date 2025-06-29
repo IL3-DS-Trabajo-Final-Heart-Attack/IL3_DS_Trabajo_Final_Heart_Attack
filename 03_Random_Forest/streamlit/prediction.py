@@ -53,6 +53,27 @@ def show_patient_prediction_section():
             st.write("### Resultado de la predicción")
             st.write("**¿Riesgo de infarto?:**", "Sí" if pred == 1 else "No")
             st.write(f"**Probabilidad:** No: {proba[0]:.2%}, Sí: {proba[1]:.2%}")
+            
+            # Mensaje de advertencia importante
+            st.warning("""
+            **⚠️ ADVERTENCIA IMPORTANTE**
+            
+            Esta predicción se basa únicamente en las variables biométricas y bioquímicas ingresadas (edad, género, frecuencia cardíaca, presión arterial, glucosa, CK-MB y troponina). 
+            
+            **IMPORTANTE CONSIDERAR:**
+            - El diagnóstico de infarto agudo del miocardio requiere evaluación médica completa
+            - Se deben considerar síntomas clínicos, historia médica, electrocardiograma, y otros exámenes
+            - Factores como dolor torácico, disnea, sudoración, náuseas, y otros síntomas son cruciales
+            - El contexto clínico completo es fundamental para un diagnóstico preciso
+            
+            **ESTE MODELO:**
+            - Fue desarrollado únicamente con fines educativos y de investigación
+            - NO pretende suplantar o reemplazar el criterio médico profesional
+            - NO debe utilizarse como herramienta de diagnóstico clínico
+            - Los resultados deben interpretarse con precaución
+            
+            **En caso de síntomas sospechosos de infarto, busque atención médica inmediata.**
+            """)
  
         else:
             st.write("### Resultado de la predicción")
