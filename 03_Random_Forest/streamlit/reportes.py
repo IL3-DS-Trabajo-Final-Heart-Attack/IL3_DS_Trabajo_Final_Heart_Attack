@@ -93,8 +93,4 @@ def show_roc_curve_section(model, X_test, y_test):
     - **False Positive Rate (FPR):** Proporción de negativos reales que son clasificados incorrectamente como positivos (falsos positivos / total de negativos reales).
     - **True Positive Rate (TPR):** Proporción de positivos reales que son correctamente identificados (verdaderos positivos / total de positivos reales).
     - **AUC (Área Bajo la Curva):** Mide la capacidad del modelo para distinguir entre clases. Un valor de 1.0 indica un modelo perfecto; 0.5 indica un modelo sin capacidad de discriminación.
-    """)
-
-    X_test = pd.read_csv("data/processed/X_test.csv")
-    y_test = pd.read_csv("data/processed/y_test.csv").squeeze()
-    model = load_model("models/rf_model.joblib") 
+    """) 
