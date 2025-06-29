@@ -13,7 +13,7 @@ model = RandomForestClassifier(
     max_features= 'sqrt',
     class_weight="balanced",
     random_state=42,
-    oob_score=True
+    oob_score=True,    
 )
 model.fit(X_train, y_train)
 
