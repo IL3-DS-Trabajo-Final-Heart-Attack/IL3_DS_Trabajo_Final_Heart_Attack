@@ -43,7 +43,7 @@ def show_patient_prediction_section():
                 "trop": trop
             }
             nuevo_paciente = pd.DataFrame([valores_paciente])
-            model = load_model("models/rf_model.joblib")
+            model = load_model("03_Random_Forest\streamlit\models\rf_model.joblib")
             pred, proba = predict(model, nuevo_paciente)
 
             st.write("### Resultado de la predicción")
