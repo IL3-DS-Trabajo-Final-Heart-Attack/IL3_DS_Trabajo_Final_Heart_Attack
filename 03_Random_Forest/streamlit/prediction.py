@@ -9,7 +9,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 def show_patient_prediction_section():
     col1, col2 = st.columns([1.2, 2])
     with col1:
-        st.write("### Ingrese los datos del paciente")
+        st.write("### Ingreses los datos del paciente")
         with st.form("patient_form"):
             age = st.number_input("Edad", min_value=18, max_value=100, value=55, help="Edad del paciente en años")
             gender = st.selectbox("Género", options=[("Hombre", 1), ("Mujer", 0)], format_func=lambda x: x[0], help="Género del paciente")[1]
