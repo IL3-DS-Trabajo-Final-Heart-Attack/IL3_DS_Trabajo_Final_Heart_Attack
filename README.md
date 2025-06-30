@@ -1,6 +1,10 @@
 # Proyecto de Ciencia de Datos: Predicción de Ataques Cardíacos
 
-Este proyecto tiene como objetivo analizar y predecir la ocurrencia de ataques cardíacos utilizando técnicas de ciencia de datos. El flujo de trabajo se divide en tres etapas principales:
+Este proyecto tiene como objetivo analizar y predecir la ocurrencia de ataques cardíacos utilizando técnicas de ciencia de datos. El flujo de trabajo se divide en tres etapas principales.
+
+> **¡Prueba la app web interactiva!**
+> Accede online a la aplicación de predicción y visualización en:
+> [https://heart-attack-ds-rforest.streamlit.app/](https://heart-attack-ds-rforest.streamlit.app/)
 
 ## 1. Análisis Exploratorio
 
@@ -65,6 +69,10 @@ El proyecto incluye una aplicación web interactiva desarrollada con Streamlit, 
 - Consultar la curva ROC y los reportes de clasificación.
 - Explorar los primeros 9 árboles individuales del modelo Random Forest.
 - Realizar predicciones para nuevos pacientes ingresando sus datos manualmente.
+
+> **Acceso online:**
+> Puedes probar la app directamente desde tu navegador en el siguiente enlace:
+> [https://heart-attack-ds-rforest.streamlit.app/](https://heart-attack-ds-rforest.streamlit.app/)
 
 #### Requisitos para la app
 
