@@ -12,3 +12,6 @@ evaluate:
 clean:
 	rm -rf data/processed/*
 	rm -rf models/*
+
+test_pacient:
+	conda run -n rf_env python src/pacient_test.py
