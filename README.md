@@ -176,3 +176,15 @@ Para la estandarización de los nombres de las variables utilizadas en el proyec
 ## Licencia
 
 Este proyecto está licenciado bajo los términos de la licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+
+## Autores
+
+- Oscar Alejandro Rojas Rodríguez
+- Àlex Francisco Sigüencia
+- Maya Carvalho-Evans
+- Weronika Balcerzak
+- Luis Antelo Laguna
+
+---
+
+Esta aplicación web es fruto de un proyecto investigativo y educacional de ciencia de datos, desarrollado en el marco del curso **Ciencia de los Datos (Data Science), Aplicaciones en Biología y Medicina con Python y R** en el **Institut de Formació Contínua - Universitat de Barcelona**.
