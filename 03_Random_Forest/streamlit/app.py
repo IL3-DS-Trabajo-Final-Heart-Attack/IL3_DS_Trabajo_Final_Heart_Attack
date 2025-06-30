@@ -8,6 +8,7 @@ from reportes import show_classification_report_table, show_feature_importance_c
 from trees import show_tree_images
 from prediction import show_patient_prediction_section
 from prediction_utils import load_model, predict
+from creditos import show_credits_section
 
 # Obtener la ruta del directorio actual del script
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +32,8 @@ def main():
         [
             "Predicción de paciente",
             "Reportes del Modelo",
-            "Árboles de decisión"
+            "Árboles de decisión",
+            "Créditos"
         ]
     )
 
@@ -56,6 +58,9 @@ def main():
     elif menu == "Árboles de decisión":
         st.subheader("Primeros 9 árboles de decisión del modelo")
         show_tree_images(os.path.join(SCRIPT_DIR, "reports/trees"))
+
+    elif menu == "Créditos":
+        show_credits_section()
 
 if __name__ == "__main__":
     main()  
