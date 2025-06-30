@@ -45,6 +45,7 @@ En esta sección se realiza un análisis multivariante para explorar las relacio
 - **Reducción de dimensionalidad (PCA):** Se aplica Análisis de Componentes Principales (PCA) para visualizar la estructura de los datos y entender qué variables contribuyen más a la variabilidad observada.
 - **Clustering:** Se utiliza K-means para identificar grupos de pacientes con características similares, determinando el número óptimo de clusters mediante el método del codo y visualizando los resultados en el espacio de componentes principales.
 - **Interpretación de clusters:** Se analizan las características promedio de cada grupo y se visualizan mediante boxplots, facilitando la interpretación clínica de los patrones encontrados.
+- **Regresión logística:** Se realiza un análisis de regresión logística para identificar y cuantificar la influencia de las variables clínicas en la probabilidad de sufrir un ataque cardíaco. Este análisis permite estimar odds ratios y evaluar la significancia estadística de cada variable. El procedimiento y los resultados detallados pueden consultarse en el notebook.
 
 Este enfoque permite identificar combinaciones de factores asociados a un mayor riesgo de ataque cardíaco y segmentar a los pacientes en grupos con perfiles clínicos diferenciados.
 
