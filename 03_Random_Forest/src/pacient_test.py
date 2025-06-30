@@ -1,14 +1,20 @@
 import pandas as pd
 import joblib
+import os
+
+# Obtener la ruta del directorio del script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# Obtener la ruta del directorio padre (03_Random_Forest)
+project_dir = os.path.dirname(script_dir)
 
 # Diccionario con los valores del paciente (modifica estos valores según el caso real)
 valores_paciente = {
     "age": 60,
-    "gender": 1,   # 1 = hombre, 0 = mujer
+    "gender": 1, 
     "hr": 80,
     "sbp": 120,
     "dbp": 92,
-    "bs": 100,     # valor de azúcar en sangre
+    "bs": 100, 
     "ckmb": 12,
     "trop": 0.014
 }
@@ -17,7 +23,7 @@ valores_paciente = {
 nuevo_paciente = pd.DataFrame([valores_paciente])
 
 # Cargar el modelo
-model = joblib.load("03_Random_Forest/models/rf_model.joblib")
+model = joblib.load(os.path.join(project_dir, "models/rf_model.joblib"))
 
 # Predecir
 prediccion = model.predict(nuevo_paciente)
