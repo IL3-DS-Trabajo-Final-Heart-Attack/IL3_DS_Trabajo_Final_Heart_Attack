@@ -159,3 +159,7 @@ Para la estandarización de los nombres de las variables utilizadas en el proyec
 - Automatización de tareas: [`Makefile`](03_Random_Forest/Makefile)
 
 ---
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
