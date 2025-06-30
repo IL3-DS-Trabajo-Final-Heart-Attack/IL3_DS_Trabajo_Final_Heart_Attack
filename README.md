@@ -33,9 +33,22 @@ En esta fase se realiza una exploración exhaustiva de los datos para comprender
 
 Este análisis exploratorio proporciona una base sólida para el análisis multivariante y el desarrollo de modelos predictivos, asegurando que las decisiones posteriores se fundamenten en una comprensión profunda de los datos.
 
+El análisis exploratorio no solo permite familiarizarse con la estructura y calidad de los datos, sino que también es clave para formular hipótesis y orientar el análisis estadístico posterior. En esta etapa, se presta especial atención a la identificación de posibles sesgos, la distribución de los factores de riesgo clásicos (como edad, presión arterial, glucosa, marcadores cardíacos) y la comparación entre pacientes con y sin eventos cardíacos. Además, se documentan los criterios de exclusión/inclusión de datos y se justifica cualquier transformación o limpieza realizada. Este proceso asegura que los modelos predictivos se construyan sobre una base sólida y representativa de la población estudiada.
+
 ## 2. Análisis Multivariante
 
-Aquí se profundiza en el estudio de las relaciones entre múltiples variables, utilizando técnicas estadísticas y visualizaciones avanzadas. El objetivo es identificar combinaciones de factores que puedan estar asociadas con un mayor riesgo de ataque cardíaco.
+En esta sección se realiza un análisis multivariante para explorar las relaciones entre múltiples variables clínicas y su asociación con el riesgo de ataque cardíaco. El flujo de trabajo incluye:
+
+- **Carga y preprocesamiento de datos:** Se cargan los datos clínicos, se verifica la ausencia de valores nulos y se transforman variables categóricas a formato numérico.
+- **Análisis exploratorio:** Se visualizan las distribuciones de las variables numéricas mediante histogramas y se analiza la matriz de correlación, tanto general como específicamente respecto al resultado clínico ("Result").
+- **Visualización de relaciones:** Se emplean pairplots y mapas de calor para identificar patrones y relaciones entre variables.
+- **Reducción de dimensionalidad (PCA):** Se aplica Análisis de Componentes Principales (PCA) para visualizar la estructura de los datos y entender qué variables contribuyen más a la variabilidad observada.
+- **Clustering:** Se utiliza K-means para identificar grupos de pacientes con características similares, determinando el número óptimo de clusters mediante el método del codo y visualizando los resultados en el espacio de componentes principales.
+- **Interpretación de clusters:** Se analizan las características promedio de cada grupo y se visualizan mediante boxplots, facilitando la interpretación clínica de los patrones encontrados.
+
+Este enfoque permite identificar combinaciones de factores asociados a un mayor riesgo de ataque cardíaco y segmentar a los pacientes en grupos con perfiles clínicos diferenciados.
+
+El análisis multivariante profundiza en la comprensión de cómo interactúan múltiples variables simultáneamente y cómo estas interacciones pueden influir en el riesgo de ataque cardíaco. Se exploran relaciones complejas que no serían evidentes en análisis univariantes o bivariantes. Además de las técnicas mencionadas (PCA y clustering), se pueden emplear métodos adicionales como análisis discriminante, regresión logística multivariable o árboles de decisión para validar los hallazgos y robustecer las conclusiones. Las visualizaciones multivariantes, como los mapas de calor y los gráficos de componentes principales, permiten comunicar de manera intuitiva los patrones detectados y facilitan la interpretación clínica de los resultados. Este enfoque integral es fundamental para identificar perfiles de riesgo y posibles subgrupos de pacientes que podrían beneficiarse de intervenciones personalizadas.
 
 ## 3. Entrenamiento de Random Forest
 
