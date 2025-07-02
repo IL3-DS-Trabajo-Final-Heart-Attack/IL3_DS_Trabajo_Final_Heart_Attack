@@ -1,4 +1,4 @@
-# Proyecto de Ciencia de Datos: Predicción de Ataques Cardíacos
+# Proyecto Final de Ciencia de Datos:
 
 Este proyecto tiene como objetivo analizar y predecir la ocurrencia de ataques cardíacos utilizando técnicas de ciencia de datos. El flujo de trabajo se divide en tres etapas principales.
 
