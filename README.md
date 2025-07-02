@@ -62,14 +62,20 @@ El directorio `03_Random_Forest` contiene:
 
 - `data/`: Datos en crudo (`raw/`), procesados (`processed/`) y referencias externas (`external/`).
 - `models/`: Modelos entrenados en formato `.joblib`.
-- `notebooks/`: Notebooks de experimentación y análisis.
+- `notebooks/`: Notebooks de experimentación y análisis, incluyendo:
+  - `DW.ipynb`: Análisis exploratorio y visualización de datos para Random Forest.
 - `reports/`: Resultados de la evaluación del modelo, incluyendo:
   - `classification_report.txt`: Reporte de clasificación.
   - `confusion_matrix.txt`: Matriz de confusión.
   - `feature_importances.txt`: Importancia de variables.
   - `roc_curve.png`: Curva ROC del modelo.
   - `trees/tree_*.png`: Imágenes de los primeros 10 árboles del Random Forest.
-- `src/`: Scripts fuente para preprocesamiento, entrenamiento y evaluación.
+- `src/`: Scripts fuente para preprocesamiento, entrenamiento y evaluación, incluyendo:
+  - `preprocess.py`: Preprocesamiento de datos.
+  - `train.py`: Entrenamiento del modelo Random Forest.
+  - `evaluate.py`: Evaluación del modelo y generación de reportes.
+  - `pacient_test.py`: Utilidades para pruebas y predicciones sobre pacientes individuales.
+- `streamlit/`: Aplicación web interactiva y utilidades para visualización y predicción, incluyendo:
 - `Makefile`: Automatización de tareas.
 - `environment.yml`: Dependencias del entorno Conda.
 
