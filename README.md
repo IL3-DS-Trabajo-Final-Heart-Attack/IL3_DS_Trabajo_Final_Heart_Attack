@@ -6,6 +6,16 @@ Este proyecto tiene como objetivo analizar y predecir la ocurrencia de ataques c
 > Accede online a la aplicación de predicción y visualización en:
 > [https://heart-attack-ds-rforest.streamlit.app/](https://heart-attack-ds-rforest.streamlit.app/)
 
+## Documento principal del trabajo final
+
+El documento [`Predicción de IAM (Heart Attack).pdf`](./Predicción%20de%20IAM%20(Heart%20Attack).pdf) es el equivalente al "paper" o memoria principal del proyecto. En él se explica con mayor profundidad todo el proceso realizado, incluyendo la justificación, metodología, análisis exploratorio, análisis multivariante y el desarrollo del modelo de Machine Learning (Random Forest) para la predicción de ataques al corazón en una población.
+
+**Título completo:**
+
+> Predicción de ataques al corazón en una población a través de un análisis exploratorio, un análisis multivariante y un modelo de Machine Learning (Random Forest)
+
+Este documento recoge todos los detalles, resultados y conclusiones del trabajo final, sirviendo como referencia principal para comprender el alcance y la profundidad del análisis realizado.
+
 ## 1. Análisis Exploratorio
 
 En esta fase se realiza una exploración exhaustiva de los datos para comprender su estructura, distribución y posibles relaciones entre variables. El análisis exploratorio es fundamental para detectar patrones, valores atípicos, errores y guiar el modelado posterior. Las actividades principales incluyen:
